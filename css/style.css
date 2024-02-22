@@ -1,0 +1,132 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+/* general */
+:root {
+    --color-nav: #0084fd;
+    --color-bg-color-white: #ffffff;
+    --color-bg-color-secondary: #9792e4;
+    --color-footer-color: #333333;
+    --color-bg-jambo: #b5ddff;
+    --it-s-free: #EBBE76;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "PT Sans", sans-serif;
+}
+/* header  */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    background-color: var(--color-nav);
+    display: none;
+}
+
+header nav {
+    position: relative;
+}
+
+header nav:hover ul {
+    display: block;
+}
+
+header nav a {
+    display: block;
+    padding: 0 40px;
+}
+
+/* main  */
+main {
+    padding-top: 70px;
+}
+section {
+    scroll-margin-top: 75px;
+}
+#features img {
+    width: 100%;
+    position: relative;
+    top: 24px;
+}
+/* footer  */
+#call-to-action>div,
+footer>div {
+    padding: 20px;
+}
+/* text  */
+.clr-white {
+    color: var(--color-bg-color-white);
+}
+/* background  */
+.bg-blue {
+    background-color: var(--color-nav);
+}
+.bg-light {
+    background-color: var(--color-bg-jambo);
+}
+/* border  */
+
+/* utility  */
+.container {
+    width: 100%;
+    padding: 40px;
+}
+.relative {
+    position: relative;
+}
+.card {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.small-rounded {
+    border-radius: 20px;
+}
+/* flex utility  */
+
+/* media query  */
+
+@media screen and (min-width: 1200px) {
+    header nav:hover ul {
+        display: flex;
+    }
+
+    header nav ul {
+        position: static;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    i.fa-solid.fa-bars {
+        display: none;
+    }
+}
+@media screen and (min-width: 480px) {}
+@media screen and (min-width: 576) {}
+@media screen and (min-width: 480px) {}
