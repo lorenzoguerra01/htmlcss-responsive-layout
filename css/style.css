@@ -26,9 +26,11 @@ html {
 body {
     font-family: "PT Sans", sans-serif;
 }
+
 a {
     color: var(--color-bg-color-white);
 }
+
 /* header  */
 header {
     position: fixed;
@@ -78,31 +80,42 @@ section img {
     width: 100%;
     display: block;
 }
-#features .fa-solid, #features h3 {
+
+#features .fa-solid,
+#features h3 {
     color: var(--color-nav);
 }
+
 #benefits div {
     color: var(--color-bg-color-secondary);
 }
+
 /* footer  */
-#call-to-action>div,
-footer>div {
-    padding: 20px;
+footer {
+    padding: 20px 40px;
 }
 
 /* text  */
 .white {
     color: var(--color-bg-color-white);
 }
+
 .blue {
     color: var(--color-nav);
 }
+
 .purple {
     color: var(--color-bg-color-secondary);
 }
+
 .black {
     color: var(--color-footer-color);
 }
+
+.yellow {
+    color: var(--it-s-free);
+}
+
 /* background  */
 .bg-blue {
     background-color: var(--color-nav);
@@ -120,6 +133,10 @@ footer>div {
     background-color: var(--color-bg-color-white);
 }
 
+.bg-black {
+    background-color: var(--color-footer-color);
+}
+
 /* border  */
 
 /* utility  */
@@ -128,11 +145,16 @@ footer>div {
     padding: 40px;
 }
 
+.opacity {
+    filter: brightness(0.7);
+}
+
 .relative {
     position: relative;
 }
 
-.card {
+.card,
+.big-card {
     padding: 20px;
     margin-bottom: 20px;
 }
@@ -140,11 +162,13 @@ footer>div {
 .small-rounded {
     border-radius: 20px;
 }
-#testimonials img{
+
+#testimonials img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .round {
     width: 50%;
     aspect-ratio: 1 / 1;
@@ -152,9 +176,49 @@ footer>div {
     border-radius: 50%;
     margin: auto;
 }
+
 /* flex utility  */
 
 /* media query  */
+
+
+@media screen and (min-width: 768px) {
+    #features .big-card {
+        width: calc(100% * (2 / 3) - 30px);
+    }
+
+    #features .card {
+        width: calc(100% / 3 - 30px);
+    }
+
+    #features .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin: auto;
+    }
+
+    #testimonials .card {
+        display: flex;
+    }
+
+    #benefits .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    #benefits .card {
+        width: calc(100% / 2 - 30px);
+    }
+    #about-us {
+        display: flex;
+    }
+    footer>div {
+        width: 600px;
+        margin: auto;
+    }
+}
 
 @media screen and (min-width: 1200px) {
     header nav:hover ul {
@@ -171,12 +235,57 @@ footer>div {
         width: 100%;
     }
 
+    header {}
+
     i.fa-solid.fa-bars {
         display: none;
     }
-}
 
-@media screen and (min-width: 480px) {}
+    #features .container {
+        width: 1000px;
+    }
+
+    #planning .container {
+        display: flex;
+        align-items: flex-end;
+        width: 800px;
+        margin: auto;
+    }
+
+    #planning .card {
+        width: calc(50%);
+    }
+
+    #testimonials {
+        width: 1000px;
+        margin: auto;
+    }
+
+    #features .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin: auto;
+    }
+
+    #benefits>div {
+        width: 1000px;
+        margin: auto;
+        text-align: center;
+    }
+
+    #benefits .card {
+        width: calc(100% / 3 - 30px);
+    }
+    #about-us {
+        width: 1000px;
+        margin: auto;
+    }
+    #call-to-action>div {
+        width: 600px;
+        margin: auto;
+    }
+}
 
 @media screen and (min-width: 576) {}
 
